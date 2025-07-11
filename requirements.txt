@@ -1,0 +1,6 @@
+voila
+pandas
+plotly
+ipywidgets
+numpy
+notebook
