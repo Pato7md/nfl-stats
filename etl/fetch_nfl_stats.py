@@ -14,7 +14,7 @@ db_port = '5432'
 db_name = 'postgres'
 
 # SQLAlchemy-Engine
-engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
+python -m pip install psycopg2-binary
 
 def fetch_nfl_stats(position: str, week: int = None, year: int = None):
     base_urls = {
@@ -78,7 +78,9 @@ def fetch_nfl_stats(position: str, week: int = None, year: int = None):
         'MISC G',
         'MISC FPTS/G',
         'FPTS/G',
-        'MISC FL'
+        'MISC FL',
+        'ROST',
+        'MISC ROST'
     ]
     df = df.drop(columns=columns_to_drop, errors='ignore')
 
@@ -111,7 +113,6 @@ def fetch_nfl_stats(position: str, week: int = None, year: int = None):
         'RECEIVING LG': 'recv_lg',
         'RECEIVING 20+': 'recv_20+',
         'MISC FPTS': 'fpts',
-        'MISC ROST': 'rost',
         'FG': 'k_fgm',
         'FGA': 'k_fga',
         'PCT': 'k_pct',
@@ -124,7 +125,6 @@ def fetch_nfl_stats(position: str, week: int = None, year: int = None):
         'XPT': 'k_xpm',
         'XPA': 'k_xpa',
         'FPTS': 'fpts',
-        'ROST': 'rost',
         'TACKLE': 'def_tackle',
         'ASSIST': 'def_assist',
         'SACK': 'def_sack',
