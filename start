@@ -1,2 +1,4 @@
+echo "Starting Violà with debug..."
+
 #!/bin/bash
 voila dashboards/nfl_dashboard.ipynb --show_tracebacks=True --debug --port=$PORT --no-browser --Voila.ip=0.0.0.0
