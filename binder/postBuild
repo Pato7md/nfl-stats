@@ -1,6 +1,8 @@
 #!/bin/bash
 # postBuild: Installiere zusätzliche Pakete
 
+chmod +x start
+
 # Damit Voilà im Binder funktioniert:
 jupyter server extension enable voila --sys-prefix
 
