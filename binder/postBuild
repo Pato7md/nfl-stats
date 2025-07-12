@@ -2,6 +2,6 @@
 # postBuild: Installiere zusätzliche Pakete
 
 # Damit Voilà im Binder funktioniert:
-jupyter serverextension enable voila --sys-prefix
+jupyter server extension enable voila --sys-prefix
 
 # Optional: weitere Befehle wie db-Migration, Assets kopieren etc.
