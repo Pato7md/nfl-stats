@@ -11,7 +11,7 @@ db_user = 'postgres'
 db_password = 'Mic$Tam7373'
 db_host = 'localhost'
 db_port = '5432'
-db_name = 'nfl'
+db_name = 'postgres'
 db_schema = 'public'
 
 # SQLAlchemy-Engine
