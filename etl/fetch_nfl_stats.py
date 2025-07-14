@@ -11,7 +11,8 @@ db_user = 'postgres'
 db_password = 'Mic$Tam7373'
 db_host = 'localhost'
 db_port = '5432'
-db_name = 'postgres'
+db_name = 'nfl'
+db_schema = 'public'
 
 # SQLAlchemy-Engine
 python -m pip install psycopg2-binary
@@ -153,7 +154,7 @@ def fetch_nfl_stats(position: str, week: int = None, year: int = None):
 
 
     # Überführung in SQL
-    df.to_sql(table_name, engine, if_exists='append', index=False)
+    df.to_sql(table_name, engine, schema='public', if_exists='append', index=False)
 
     print(f"Daten für Position '{position.upper()}' aus Woche {week}/{year} erfolgreich importiert.")
 
